@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
+import tempfile
 
 # Project directory
 project = Path(
@@ -59,7 +60,7 @@ if uploaded_files:
 
     for uploaded_file in uploaded_files:
 
-        temp_path = project / "processed" / uploaded_file.name
+        temp_path = Path(tempfile.gettempdir()) / uploaded_file.name
         temp_path.parent.mkdir(exist_ok=True)
 
         with open(temp_path, "wb") as f:
