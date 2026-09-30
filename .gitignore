@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+processed/
+outputs/
+
+documents/
+.streamlit/secrets.toml
+
+*.log
